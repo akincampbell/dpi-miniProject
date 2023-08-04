@@ -5,6 +5,10 @@ get("/") do
   erb(:homepage)
 end
 
+get("/about") do
+  erb(:homepage)
+end
+
 get("/aff") do
   erb(:new_aff)
 end
@@ -24,6 +28,11 @@ get("/aff/results") do
   erb(:aff_results)
 end
 
-get("/facts") do
-  erb(:homepage)
+get("/contact") do
+  erb(:new_contact)
+end
+
+get("/contact/results") do
+  @first_name = params.fetch("firstname")
+  erb(:contact_results)
 end
