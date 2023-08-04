@@ -1,12 +1,28 @@
+<!-- /views/layout.erb -->
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sinatra Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mental Health App</title>
+
+    <style>
+      .navbar {
+        display:flex;
+        justify-content: space-around;
+      }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar">
+      <div><a href="/aff">Positive Affirmations</a></div>
+      <div><a href="/facts">Mental Health Facts</a></div>
+      <div><a href="/form">Track Mood</a></div>
+    </div>
+
+    <%=yield%>
   </body>
+  <!--footer>
+    <div><a href="/">Rules</a></div>
+  </footer-->
 </html>
